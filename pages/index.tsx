@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { EmoteList } from "../components";
 import { useEmotes } from "../hooks";
+import { Toaster } from "react-hot-toast";
 
 const Home: NextPage = () => {
   const { emotes, loadEmotes } = useEmotes();
@@ -22,7 +23,13 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 3000,
+          style: { backgroundColor: "black", color: "white" },
+        }}
+      />
       <Image
         src={"https://kacky.info/static/media/logos/logo_2022.svg"}
         width={700}
