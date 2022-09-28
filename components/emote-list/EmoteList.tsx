@@ -26,14 +26,13 @@ function EmoteList({ initialEmoteList }: Props) {
   };
   return (
     <>
-      <label htmlFor="filterBar" className={styles.label}>
-        Filter:
+      <label className={styles.label}>
+        Search Emote:
         <input
           className={styles.input}
           type="text"
           placeholder="Search..."
           value={query}
-          id="filterBar"
           onChange={(e) => {
             handleInputChange(e);
           }}

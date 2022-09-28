@@ -10,6 +10,7 @@ const Home: NextPage = () => {
   const { emotes, loadEmotes } = useEmotes();
   useEffect(() => {
     loadEmotes();
+    console.log("hola");
   }, [loadEmotes]);
   return (
     <>
